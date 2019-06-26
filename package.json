@@ -1,0 +1,33 @@
+{
+  "name": "checkmeout",
+  "version": "1.0.0",
+  "description": "checkmeout",
+  "main": "index.js",
+  "scripts": {
+    "react-dev": "webpack -d --watch",
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikkelrev22/checkmeout.git"
+  },
+  "author": "Michael Thompson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikkelrev22/checkmeout/issues"
+  },
+  "homepage": "https://github.com/mikkelrev22/checkmeout#readme",
+  "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.23.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^2.2.1"
+  }
+}
