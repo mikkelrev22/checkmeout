@@ -4,15 +4,15 @@ const AccountForm = (props) => {
   return (
     <div> 
     <h1>Account Setup</h1>
-    <form onSubmit={props.handleInputChange}>
+    <form>
       <label> Name
-        <input name="name"/>
+        <input onChange={props.handleInputChange} name="name" value={props.name}/>
       </label>
       <label> E-mail
-        <input name="email"/>
+        <input onChange={props.handleInputChange} name="email" value={props.email}/>
       </label>
       <label> Password
-        <input name="password"/>
+        <input onChange={props.handleInputChange} name="password" value={props.password}/>
       </label>
     </form>
     <button onClick={props.showShippingForm}>Next</button>

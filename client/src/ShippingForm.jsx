@@ -4,18 +4,18 @@ const ShippingForm = (props) => {
   return (
     <div>
      <h1>Billing Information</h1>
-      <form onSubmit={props.handleInputChange}>
+      <form>
        <label> Shipping Address
-        <input name="address1"/>
-        <input name="address2"/>
+        <input onChange={props.handleInputChange} name="address1" value={props.address1}/>
+        <input onChange={props.handleInputChange} name="address2" value={props.address2}/>
        </label>
        <label> City, State, ZIP
-        <input name="city"/>
-        <input name="state"/>
-        <input name="shippingZIP"/>
+        <input onChange={props.handleInputChange} name="city" value={props.city}/>
+        <input onChange={props.handleInputChange} name="state" value={props.state}/>
+        <input onChange={props.handleInputChange} name="shippingZIP" value={props.shippingZIP}/>
        </label>
        <label> Phone Number
-        <input name="phonenumber"/>
+        <input onChange={props.handleInputChange} name="phonenumber" value={props.phonenumber}/>
        </label>
       </form>  
       <button onClick={props.showBillingForm}>Next</button>

@@ -4,18 +4,18 @@ const BillingForm = (props) => {
   return (
    <div>
      <h1>Billing Information</h1>
-    <form onSubmit={props.handleInputChange}>
-      <label> Credit Card#
-        <input name="creditcard"/>
+    <form>
+      <label> Credit Card Number
+        <input onChange={props.handleInputChange} name="creditcard" value={props.creditcard}/>
       </label>
       <label> Expiration Date
-        <input name="expirationdate"/>
+        <input onChange={props.handleInputChange} name="expirationdate" value={props.expirationdate}/>
       </label>
       <label> CVV
-        <input name="cvv"/>
+        <input onChange={props.handleInputChange} name="cvv" value={props.cvv}/>
       </label>
       <label> Billing ZIP Code
-        <input name="billingZIP"/>
+        <input onChange={props.handleInputChange} name="billingZIP"value={props.billingZIP}/>
       </label>
     </form>
     <button onClick={props.complete}>Complete</button>
