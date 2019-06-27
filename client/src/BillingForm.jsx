@@ -4,20 +4,21 @@ const BillingForm = (props) => {
   return (
    <div>
      <h1>Billing Information</h1>
-    <form>
+    <form onSubmit={props.handleInputChange}>
       <label> Credit Card#
-        <input/>
+        <input name="creditcard"/>
       </label>
       <label> Expiration Date
-        <input/>
+        <input name="expirationdate"/>
       </label>
       <label> CVV
-        <input/>
+        <input name="cvv"/>
       </label>
       <label> Billing ZIP Code
-        <input/>
+        <input name="billingZIP"/>
       </label>
     </form>
+    <button onClick={props.complete}>Complete</button>
    </div>
   )
 }

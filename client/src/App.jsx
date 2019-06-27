@@ -10,11 +10,25 @@ class App extends React.Component {
     this.state = {
         accountform: false,
         shippingform: false,
-        billingform: false
+        billingform: false,
+        name: '',
+        email: '',
+        password: '',
+        address1: '',
+        address2: '',
+        city: '',
+        state: '',
+        shippingZIP: '',
+        phonenumber: '',
+        creditcard: '',
+        expirationdate: '',
+        cvv: '',
+        billingZIP: ''
     }
     this.handleCheckoutClick = this.handleCheckoutClick.bind(this)
     this.showShippingForm = this.showShippingForm.bind(this)
     this.showBillingForm = this.showBillingForm.bind(this)
+    this.handleInputChange = this.handleInputChange.bind(this)
   }
 
   handleCheckoutClick(){
@@ -38,6 +52,18 @@ class App extends React.Component {
       billingform: true
     })
  }
+ handleInputChange(event){
+    const target = event.target
+    const value = target.value
+    const name = target.name
+    this.setState({
+        [name]: value
+    })
+    console.log(this.state)
+ }
+ complete(){
+
+ }
 
   render() {
     return (
@@ -47,13 +73,13 @@ class App extends React.Component {
           </div>
           <div>  
                 {this.state.accountform &&
-            <AccountForm showShippingForm={this.showShippingForm} accountform={this.state.accountform}/>
+            <AccountForm handleInputChange= {this.handleInputChange} showShippingForm={this.showShippingForm} accountform={this.state.accountform}/>
                  }
                  {this.state.shippingform &&
-            <ShippingForm showBillingForm={this.showBillingForm} shippingform={this.state.shippingform}/>
+            <ShippingForm handleInputChange= {this.handleInputChange} showBillingForm={this.showBillingForm} shippingform={this.state.shippingform}/>
                  }
                  {this.state.billingform &&
-            <BillingForm billingform={this.state.billingform}/>
+            <BillingForm handleInputChange= {this.handleInputChange} billingform={this.state.billingform} complete={this.complete}/>
                  }
           </div>
       </div>  
